@@ -61,6 +61,8 @@ RUN chmod +x /usr/local/bin/entrypoint.sh \
 # TODO: Have docker-compose use environment variables to create files like setup.json and config.json.
 # COPY --from=hairyhenderson/gomplate:stable /gomplate /usr/local/bin/gomplate
 
+RUN mkdir -p /opt/config && echo '{"url":"https://tecboard-dax7.onrender.com","secret":"aoisjdfisiuoejafklsgiw48903ipqojfwg4wujn","database":"mongo","mongo":{"uri":"mongodb+srv://tecboard:tecboard2026@tec.hkmt17w.mongodb.net/Tec?retryWrites=true&w=majority","database":"Tec"},"port":4567}' > /opt/config/config.json
+
 USER ${USER}
 
 EXPOSE 4567
