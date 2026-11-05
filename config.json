@@ -6,5 +6,5 @@
     "uri": "mongodb+srv://tecboard:tecboard2026@tec.hkmt17w.mongodb.net/Tec?retryWrites=true&w=majority",
     "database": "Tec"
   },
-  "port": 10000
+  "port": 4567
 }
