@@ -1,0 +1,9 @@
+{
+  "url": "https://tecboard-dax7.onrender.com",
+  "secret": "aoisjdfisiuoejafklsgiw48903ipqojfwg4wujn",
+  "database": "mongo",
+  "mongo": {
+    "uri": "mongodb+srv://tecboard:tecboard2026@tec.hkmtl7w.mongodb.net/Tec?retryWrites=true&w=majority"
+  },
+  "port": 10000
+}
