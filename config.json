@@ -3,7 +3,8 @@
   "secret": "aoisjdfisiuoejafklsgiw48903ipqojfwg4wujn",
   "database": "mongo",
   "mongo": {
-    "uri": "mongodb+srv://tecboard:tecboard2026@tec.hkmtl7w.mongodb.net/Tec?retryWrites=true&w=majority"
+    "uri": "mongodb+srv://tecboard:tecboard2026@tec.hkmt17w.mongodb.net/Tec?retryWrites=true&w=majority",
+    "database": "Tec"
   },
   "port": 10000
 }
