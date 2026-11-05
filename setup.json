@@ -1,0 +1,12 @@
+{
+  "URL": "https://tecboard-dax7.onrender.com",
+  "secret": "aoisjdfisiuoejafklsgiw48903ipqojfwg4wujn",
+  "database": "mongo",
+  "mongo": {
+    "uri": "mongodb+srv://tecboard:tecboard2026@tec.hkmtl7w.mongodb.net/Tec?retryWrites=true&w=majority"
+  },
+  "admin:username": "admin",
+  "admin:password": "master1996",
+  "admin:password:confirm": "master1996",
+  "admin:email": "famr87@hotmail.com"
+}
