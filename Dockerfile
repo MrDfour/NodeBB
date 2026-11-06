@@ -61,6 +61,8 @@ RUN chmod +x /usr/local/bin/entrypoint.sh \
 # TODO: Have docker-compose use environment variables to create files like setup.json and config.json.
 # COPY --from=hairyhenderson/gomplate:stable /gomplate /usr/local/bin/gomplate
 
+RUN echo '{"admin:username":"admin","admin:password":"Password123!","admin:email":"admin@example.com","url":"https://nodebb.fly.dev","database":"mongo","mongo":{"uri":"mongodb://tecboard:tecboard2026@ac-yssksck-shard-00-00.hkmt17w.mongodb.net:27017,ac-yssksck-shard-00-01.hkmt17w.mongodb.net:27017,ac-yssksck-shard-00-02.hkmt17w.mongodb.net:27017/Tec?ssl=true&replicaSet=atlas-upfggj-shard-0&authSource=admin","database":"Tec"},"port":4567}' > /usr/src/app/setup.json && chown -R ${USER}:${USER} /usr/src/app/setup.json
+
 USER ${USER}
 
 EXPOSE 4567
@@ -72,4 +74,4 @@ VOLUME ["/usr/src/app/node_modules", "/usr/src/app/build", "/usr/src/app/public/
 # This approach is crucial to circumvent issues with unmanaged subprocesses and signal handling in containerised environments.
 # By integrating tini, we enhance the reliability and stability of our Docker containers.
 # Ensures smooth start-up and shutdown processes, and reliable, safe handling of signal processing.
-ENTRYPOINT ["tini", "--", "entrypoint.sh"]
+CMD ["node", "app.js"]
