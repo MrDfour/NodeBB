@@ -31,8 +31,6 @@ USER ${USER}
 RUN npm install --omit=dev \
     && rm -rf .npm
 
-RUN node ./nodebb build client admin templates languages
-
 FROM node:lts-slim AS final
 
 ENV NODE_ENV=production \
