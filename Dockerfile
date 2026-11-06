@@ -31,7 +31,7 @@ USER ${USER}
 RUN npm install --omit=dev \
     && rm -rf .npm
 
-RUN node ./nodebb build
+RUN node ./nodebb build --series
 
 FROM node:lts-slim AS final
 
